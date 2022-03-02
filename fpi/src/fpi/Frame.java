@@ -61,7 +61,7 @@ public class Frame extends JFrame {
 		fx=txt_fx.getText();
 		if(!is_double(txt_x0.getText()) || !is_double(txt_prec.getText()) || !is_double(txt_xmin.getText()) ||
 				!is_double(txt_xmax.getText()) || !is_double(txt_ymin.getText()) || !is_double(txt_ymax.getText())) {
-			JOptionPane.showMessageDialog(null, "Nìkterá z promìnných není ve formátu double.");
+			JOptionPane.showMessageDialog(null, "Except for f(x), all variables must be type double.");
 			return;
 		}else {
 			x0=Double.parseDouble(txt_x0.getText());
@@ -179,7 +179,7 @@ public class Frame extends JFrame {
 		
 		btn_help.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, "HELP to be done.");
+				JOptionPane.showMessageDialog(null, "For help, please visit: https://github.com/mandresik/Fixed-point-iteration.");
 			}
 		});
 		

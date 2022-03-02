@@ -44,10 +44,10 @@ public class Iteration {
 		}
 		
 		if(Math.abs(y.get(i)-x.get(i))<=eps) {
-			JOptionPane.showMessageDialog(null, "Pevný bod byl nalezen v bodì "+x.get(i)+".");
+			JOptionPane.showMessageDialog(null, "Fixed point found in x= "+x.get(i)+".");
 		}else {
 			fix_to_fit(x.get(i), y.get(i));
-			JOptionPane.showMessageDialog(null, "Pevný bod nebyl nalezen.");
+			JOptionPane.showMessageDialog(null, "Fixed point not fount. Try using larger scale.");
 		}
 	}
 	
