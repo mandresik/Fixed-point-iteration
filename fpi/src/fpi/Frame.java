@@ -194,10 +194,6 @@ public class Frame extends JFrame {
 				ArrayList<Double> yy=new ArrayList<Double>();
 				xx=iteration.get_x();
 				yy=iteration.get_y();
-		//		for(int i=0;i<xx.size();i++) {
-		//			System.out.print("x= "+xx.get(i)+",   y= "+yy.get(i)+"\n");
-		//		}
-				
 				graph.create_fvalues();
 				graph.draw_graph();
 				graph.setVisible(true);
