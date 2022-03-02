@@ -190,6 +190,14 @@ public class Frame extends JFrame {
 				iteration=new Iteration(fx,x0,eps,x_min,x_max,y_min,y_max);
 				iteration.calculate();
 				graph=new Graph(iteration.get_x(),iteration.get_y(),fx,x_min,x_max,y_min,y_max);
+				ArrayList<Double> xx=new ArrayList<Double>();
+				ArrayList<Double> yy=new ArrayList<Double>();
+				xx=iteration.get_x();
+				yy=iteration.get_y();
+		//		for(int i=0;i<xx.size();i++) {
+		//			System.out.print("x= "+xx.get(i)+",   y= "+yy.get(i)+"\n");
+		//		}
+				
 				graph.create_fvalues();
 				graph.draw_graph();
 				graph.setVisible(true);

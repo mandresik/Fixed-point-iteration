@@ -2,6 +2,7 @@ package fpi;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JFrame;
 
@@ -9,6 +10,7 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.xy.XYDataset;
@@ -24,9 +26,9 @@ public class Graph extends JFrame {
 	private double xi, yi, x_min, x_max, y_min, y_max;
 	private Function function;
 	
-	
 	public Graph(ArrayList<Double> x, ArrayList<Double> y, String fx, 
 			double x_min, double x_max, double y_min, double y_max) {
+		super("Fixed point graphical interaction");
 		this.x=x;
 		this.y=y;
 		this.x_min=x_min;
@@ -49,9 +51,9 @@ public class Graph extends JFrame {
 	}
 	
 	public void draw_graph() {
-		JFreeChart chart= ChartFactory.createXYLineChart("Iteration", "x", "y", create_dataset());
+		JFreeChart chart= ChartFactory.createXYLineChart("Iteration", "x", "y", create_dataset(), PlotOrientation.VERTICAL, false, true, false);
 		ChartPanel panel=new ChartPanel(chart);
-		panel.setPreferredSize( new java.awt.Dimension( 560 , 367 ) );
+		panel.setPreferredSize( new java.awt.Dimension( 780 , 510 ) );
 		final XYPlot plot=chart.getXYPlot();
 		plot.setDomainGridlinesVisible(false);
         plot.setRangeGridlinesVisible(false);
@@ -63,9 +65,10 @@ public class Graph extends JFrame {
         XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer(true, false);
         renderer.setSeriesPaint(0,Color.yellow);
         renderer.setSeriesPaint(1,Color.yellow);
-        renderer.setSeriesPaint(2,Color.cyan);
-        renderer.setSeriesPaint(3,Color.blue);
-        renderer.setSeriesPaint(4,Color.DARK_GRAY);
+        renderer.setSeriesPaint(2,Color.gray);
+        renderer.setSeriesPaint(3,Color.darkGray);
+        for(int i=0;i<x.size();i++)
+        	renderer.setSeriesPaint(i+4, Color.blue);
         plot.setRenderer(renderer);
         setContentPane(panel);
 	}
@@ -83,22 +86,28 @@ public class Graph extends JFrame {
 	    yx.add(x_min, y_min);
 	    yx.add(x_max, y_max);
 	    
-	    final XYSeries it=new XYSeries("iteration");
-	    for(int i=0;i<x.size();i++) {
-	    	it.add(x.get(i), y.get(i));
-	    }
-	    
 	    final XYSeries f=new XYSeries("f(x)");
 	    for(int i=0;i<x_f.size();i++) {
 	    	f.add(x_f.get(i),y_f.get(i));
+	    }
+	    
+	    List<XYSeries> series_list=new ArrayList<XYSeries>();
+	    XYSeries temp;
+	    for(int i=0;i<x.size()-1;i++) {  // add every line individually to avoid lines rearrangement
+	    	temp=new XYSeries(Integer.toString(i));
+	    	temp.add(x.get(i), y.get(i));
+	    	temp.add(x.get(i+1), y.get(i+1));
+	    	series_list.add(temp);
 	    }
 	    
 	    final XYSeriesCollection dataset = new XYSeriesCollection( );   
 	    dataset.addSeries(x_axis);
 	    dataset.addSeries(y_axis);
 	    dataset.addSeries(yx);
-	    dataset.addSeries(it);
 	    dataset.addSeries(f);
+	    for(XYSeries line:series_list)
+	    	dataset.addSeries(line);
+	    
 	    return dataset;
 	}
 	
