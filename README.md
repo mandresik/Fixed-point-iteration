@@ -1,6 +1,6 @@
 ## Graphical illustration of a fixed point iteration
 ### What is a fixed point?
-In mathematics, a fixed point of a function is an element, that is mapped on itself by the function; it satisfies ![img](https://latex.codecogs.com/svg.image?f(x)=x) $$ f(x)=x$$. This can be illustrated by an iteration starting in a starting point $$x_0$$ and ending in a fixed point $$x $$. If the fixed point does not exist or the starting point is not chosen suitably, then the fixed point is not found.
+In mathematics, a fixed point of a function is an element, that is mapped on itself by the function; it satisfies \( f(x)=x \(. This can be illustrated by an iteration starting in a starting point $$x_0$$ and ending in a fixed point $$x $$. If the fixed point does not exist or the starting point is not chosen suitably, then the fixed point is not found.
 ### Inputs
 To illustrate fixed point iteration, these inputs must be defined:
 * function $$ f(x) $$
