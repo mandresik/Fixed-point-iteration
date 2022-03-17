@@ -13,9 +13,14 @@ To illustrate fixed point iteration, these inputs must be defined:
  * $ x_{max} $ ... maximal x-axis value
  * $ y_{min} $ ... minimal y-axis value
  * $ y_{max} $ ... maximal y-axis value
+
+* list
+* list 
+ * sublist
+ * sublist 
   
 ### Examples
-For every example is defined function $f(x)$, precision $e=10^{-3} $ and starting point $x_0$. Points of scale can be seen in every image.
+For every example, function $f(x)$, precision $e=10^{-3} $ and starting point $x_0$ is defined. Points of scale can be seen in every image.
 #### Example 1
 $$f(x)=sqrt(1-x)=\sqrt{1-x}  \hspace{4em} x_0=0.2 $$
 
