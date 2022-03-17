@@ -15,6 +15,8 @@ To illustrate fixed point iteration, these inputs must be defined:
  * $ y_{max} $ ... maximal y-axis value
 
 + list
+ + ublist
+ - sublist 
 + list 
  * sublist
  * sublist 
