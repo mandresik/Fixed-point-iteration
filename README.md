@@ -9,7 +9,6 @@ To illustrate fixed point iteration, these inputs must be defined:
 
 * precision $ e$ representing condition $f(x)=x$ in a numerical sense $ \lvert f(x)-x \rvert  \leq e$
 * scale represented by extreme values of both axis:
-
  * $ x_{min} $  ... minimal x-axis value
  
  * $ x_{max} $ ... maximal x-axis value
