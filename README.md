@@ -1,5 +1,5 @@
 ## Graphical illustration of a fixed point iteration 
-`Please note: This text is using LaTex, if not displayed correctly, [MathJax extension][Mathjax] can fix the issue. `
+`Please note: This text is using LaTex. If not displayed correctly, MathJax extension can fix this issue. ` [MathJax link][mathlink]
 ### What is a fixed point?
 In mathematics, a fixed point of a function is an element, that is mapped on itself by the function; thus $ f(x)=x $ for some $x \in D(f)$. This can be illustrated by an iteration starting in a starting point $x_0$ and ending in a fixed point $x $. If the fixed point does not exist or the starting point is not chosen suitably, then the fixed point is not found.
 ### Inputs
@@ -41,6 +41,7 @@ $$f(x)=(-1/4) * x \\ \hat \\ \\ 3 +(3/4) * x+1/4=-\frac{1}{4} x^3+\frac{3}{4}x+\
 [2]: https://live.staticflickr.com/65535/51942642957_760f90dbc2_c.jpg
 [3]: https://live.staticflickr.com/65535/51944238145_1b225a4714_c.jpg
 [4]: https://live.staticflickr.com/65535/51943948374_2ab0cc6f9c_c.jpg
+[mathlink]: https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima/related
  
 
 
