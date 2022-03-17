@@ -8,27 +8,12 @@ To illustrate fixed point iteration, these inputs must be defined:
 * starting point $ x_0 $
 
 * precision $ e$ representing condition $f(x)=x$ in a numerical sense $ \lvert f(x)-x \rvert  \leq e$
-* scale represented by extreme values of both axis:
+
  * $ x_{min} $  ... minimal x-axis value
  * $ x_{max} $ ... maximal x-axis value
  * $ y_{min} $ ... minimal y-axis value
  * $ y_{max} $ ... maximal y-axis value
 
-
-+ list
- + ublist
- - sublist 
-+ list 
- * sublist
- 
-- list 
-- cont 
- - sublist
- - sunnnn
-- listllsfka  
- 
- 
- 
 ### Examples
 For every example, function $f(x)$, precision $e=10^{-3} $ and starting point $x_0$ is defined. Points of scale can be seen in every image.
 #### Example 1
