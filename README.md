@@ -1,5 +1,4 @@
-## Graphical illustration of a fixed point iteration
- <font size="2"> This is my text number1</font> 
+## Graphical illustration of a fixed point iteration 
 ### What is a fixed point?
 In mathematics, a fixed point of a function is an element, that is mapped on itself by the function; thus $ f(x)=x $ for some $x \in D(f)$. This can be illustrated by an iteration starting in a starting point $x_0$ and ending in a fixed point $x $. If the fixed point does not exist or the starting point is not chosen suitably, then the fixed point is not found.
 ### Inputs
@@ -15,13 +14,21 @@ To illustrate fixed point iteration, these inputs must be defined:
  * $ y_{min} $ ... minimal y-axis value
  * $ y_{max} $ ... maximal y-axis value
 
+
 + list
  + ublist
  - sublist 
 + list 
  * sublist
- * sublist 
-  
+ 
+- list 
+- cont 
+ - sublist
+ - sunnnn
+- listllsfka  
+ 
+ 
+ 
 ### Examples
 For every example, function $f(x)$, precision $e=10^{-3} $ and starting point $x_0$ is defined. Points of scale can be seen in every image.
 #### Example 1
