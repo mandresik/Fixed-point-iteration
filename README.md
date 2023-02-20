@@ -4,13 +4,13 @@
 In mathematics, a fixed point of a function is an element, that is mapped on itself by the function; thus $ f(x)=x $ for some $x \in D(f)$. This can be illustrated by an iteration starting in a starting point $x_0$ and ending in a fixed point $x $. If the fixed point does not exist or the starting point is not chosen suitably, then the fixed point is not found.
 ### Inputs
 To illustrate fixed point iteration, these inputs must be defined:
-* function $ f(x) $
+* function $f(x)$
 
-* starting point $ x_0 $
+* starting point $x_0$
 
-* precision $ e$ representing condition $f(x)=x$ in a numerical sense $ \lvert f(x)-x \rvert  \leq e$
+* precision $e$ representing condition $f(x)=x$ in a numerical sense $\lvert f(x)-x \rvert  \leq e$
 
- * $ x_{min} $  ... minimal x-axis value
+ * $x_{min}$  ... minimal x-axis value
  * $ x_{max} $ ... maximal x-axis value
  * $ y_{min} $ ... minimal y-axis value
  * $ y_{max} $ ... maximal y-axis value
